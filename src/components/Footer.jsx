@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -7,8 +8,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <Link to="/" className="navbar-logo">
-            Ghar<span className="logo-accent">See</span>
+          <Link to="/" className="navbar-logo-link">
+            <img src={logoImg} alt="GharSe Logo" className="footer-logo-img" />
           </Link>
           <p className="footer-desc mt-4">
             Simple, hygienic, ghar-jaisa food delivered straight to your doorstep. Experience the taste of home anywhere.
@@ -39,15 +40,15 @@ const Footer = () => {
         <div className="footer-contact">
           <h3 className="footer-title">Contact Us</h3>
           <ul>
-            <li><Phone size={16} /> +91 98765 43210</li>
-            <li><Mail size={16} /> hello@gharsee.com</li>
+            <li><Phone size={16} /> +91 90000 00000</li>
+            <li><Mail size={16} /> hello@gharse.in</li>
             <li><MapPin size={16} /> Pune, Maharashtra</li>
           </ul>
         </div>
       </div>
       
       <div className="footer-bottom container">
-        <p>&copy; {new Date().getFullYear()} GharSee. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} GharSe. All rights reserved.</p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

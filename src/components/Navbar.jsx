@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Menu, X, User } from 'lucide-react';
 import { useState } from 'react';
+import logoImg from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -11,8 +12,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo">
-          Ghar<span className="logo-accent">See</span>
+        <Link to="/" className="navbar-logo-link">
+          <img src={logoImg} alt="GharSe" className="navbar-logo-img" />
         </Link>
 
         {/* Desktop Menu */}

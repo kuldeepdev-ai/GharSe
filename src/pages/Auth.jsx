@@ -13,13 +13,18 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate auth and redirect to dashboard
     navigate('/dashboard');
   };
 
   return (
-    <div className="auth-page bg-cream">
+    <div className="auth-page">
       <div className="container auth-container animate-fade-in-up">
+        
+        {/* Service Update Banner */}
+        <div className="text-center mb-6">
+          <span className="badge badge-outline">Currently Dinner Delivery Only</span>
+        </div>
+
         <div className="auth-card card">
           <div className="auth-header text-center">
             <h1 className="auth-title">{isLogin ? 'Welcome Back' : 'Create Account'}</h1>
@@ -35,14 +40,14 @@ const Auth = () => {
                   <label htmlFor="name">Full Name</label>
                   <div className="input-with-icon">
                     <User size={20} className="input-icon" />
-                    <input type="text" id="name" placeholder="John Doe" required={!isLogin} />
+                    <input type="text" id="name" placeholder="e.g. Aditi Sharma" required={!isLogin} />
                   </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone">Phone Number</label>
                   <div className="input-with-icon">
                     <Phone size={20} className="input-icon" />
-                    <input type="tel" id="phone" placeholder="+91 98765 43210" required={!isLogin} />
+                    <input type="tel" id="phone" placeholder="+91 90000 00000" required={!isLogin} />
                   </div>
                 </div>
               </>
@@ -52,7 +57,7 @@ const Auth = () => {
               <label htmlFor="email">Email Address</label>
               <div className="input-with-icon">
                 <Mail size={20} className="input-icon" />
-                <input type="email" id="email" placeholder="john@example.com" required />
+                <input type="email" id="email" placeholder="you@example.com" required />
               </div>
             </div>
 
